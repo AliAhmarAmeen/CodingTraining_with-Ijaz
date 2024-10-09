@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* width: 1400px; */
+            max-width: 1400px;
+
+            margin: 0 auto;
+        }
+
+        .grid-container {
+            height: 400px;
+            background-color: rgb(239, 239, 239);
+
+            /* display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr); */
+
+            justify-content: center;
+            align-content: center;
+
+            /* align-items: center; */
+            /* justify-items: center; */
+
+        }
+
+        .grid-items {
+            border: 1px solid rgb(38, 255, 0);
+
+            /* width: 100px;
+            height: 100px; */
+        }
+
+
+        /* ---- header layout justify-content and align content ---- */
+        header {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            /* justify-content: center/space-around/space-between/space-evenly; */
+            /* align-content: center/space-around/space-between/space-evenly; */
+
+            /* align grids */
+            /* justify-content: center;
+            align-content: center; */
+
+            /* individual items inside grid */
+            justify-items: center;
+            align-items: center;
+        }
+
+        /* Section */
+        .heading-text {
+            /* width: 200px;
+            height: 200px; */
+            text-align: center;
+            /* padding: 2rem 12rem; */
+        }
+
+
+        /* Media Queries */
+
+        @media screen and (max-width: 768px) {
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            .heading-text {
+                padding: 2rem 2rem;
+            }
+
+        }
+
+        @media screen and (max-width: 425px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+
+            .heading-text {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <header>
+        <div class="logo">logo</div>
+        <div class="buttons">buttons</div>
+    </header> -->
+    <!-- div.grid-container>div.grid-items*6 -->
+
+    <section class="container">
+
+        <div class="heading-text">
+            <h1>Heading</h1>
+            <p>Paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, molestias? Voluptate expedita
+                veniam ex veritatis quia, placeat sint nulla beatae! Error neque quas ea. Quam nesciunt vitae rem ad qui
+                placeat recusandae quisquam maxime, aperiam possimus cumque, quod perferendis quis vel cupiditate porro
+                ducimus obcaecati.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-items">1</div>
+            <div class="grid-items">2</div>
+            <div class="grid-items">3</div>
+            <div class="grid-items">4</div>
+            <div class="grid-items">5</div>
+            <div class="grid-items">6</div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
