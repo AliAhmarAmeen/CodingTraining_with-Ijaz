@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section-one {
+            background: linear-gradient(to right, rgb(160, 25, 25), rgb(197, 134, 17));
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .ASIDE1 {
+            font-size: 18px;
+            flex-basis: 50%;
+        }
+
+        .ASIDE2 {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: end;
+        }
+
+
+        .button1,
+        .button2 {
+            border: none;
+            border-radius: 20px;
+            padding: 15px 20px;
+            font-weight: 700;
+        }
+
+        .button1 {
+            margin-right: 10px;
+            background-color: rgb(73, 70, 70);
+            color: aliceblue;
+
+        }
+
+        .button2 {
+            background-color: transparent;
+            color: aliceblue;
+            border: 1px solid white;
+        }
+
+
+        .icons-container {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 45px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            margin-top: 45px;
+            grid-gap: 20px;
+        }
+
+        .p {
+            margin: 0;
+            padding: 2px;
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .icon2 {
+            width: 40px;
+            height: 40px;
+        }
+
+        .grid4 {
+            display: grid;
+            grid-template-columns: 10% 1fr;
+            column-gap: 15px;
+        }
+
+        .image {
+            height: 342px;
+            width: 342px;
+        }
+
+        /* grid items ordering */
+
+        .grid-item-1 {
+            order: 4;
+        }
+
+        .grid-item-2 {
+            order: 2;
+        }
+
+        .grid-item-3 {
+            order: 3;
+        }
+
+        .grid-item-4 {
+            order: 1;
+        }
+
+
+        /* media queries */
+        @media screen and (max-width: 1000px) {
+
+            .flex-container {}
+
+            /* asides ordering */
+            /* .ASIDE1 {
+                order: 2;
+            }
+
+            .ASIDE2 {
+                order: 1;
+            } */
+
+            .container {}
+
+            .ASIDE1 {}
+
+            .icons-container {
+                row-gap: 2rem;
+            }
+
+            .grid4 {}
+
+            .ASIDE2 {}
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .container {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                /* justify-content: center; */
+                row-gap: 2rem;
+            }
+
+            .ASIDE1 {
+                text-align: center;
+            }
+
+            .ASIDE2 {
+                justify-content: center;
+            }
+
+            .icons-container {
+                text-align: start;
+            }
+
+        }
+
+        @media screen and (max-width: 560px) {
+            .icons-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid4 {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            .icons-container {
+                text-align: center;
+            }
+
+            .image {
+                width: 300px;
+                height: 300px;
+            }
+
+            .ASIDE1>p {
+                padding: 0;
+            }
+
+            .flex-container {
+                padding: 0;
+            }
+
+
+        }
+
+        @media screen and (max-width: 325px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .image {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section-one">
+        <div class="container">
+
+            <div class="header">
+                <span><ion-icon class="icon2" name="airplane-outline"></ion-icon></span>
+                <h1>A Cloud Guru <br /> Learn cloud like never before </h1>
+            </div>
+
+            <div class="flex-container">
+
+                <div class="ASIDE1">
+                    <p> <b>The industry leader in learn-by-doing cloud skill training is now part of Pluralsight!</b>
+                        Master the skills you need to boost your career or accelerate your company,s cloud
+                        Transformation. In fact, 96% of our business customers see improved results within 6 months
+                        <b>
+                            Now you
+                            can, too.</b>
+                    </p>
+                    <div class="icons-container">
+                        <div class="grid4 grid-item-1">
+                            <i> <ion-icon class="icon2" name="airplane-outline"></ion-icon></i>
+                            <p class="p">01: 100s of courses of 1000s of
+                                hands-on lab</p>
+                        </div>
+
+                        <div class="grid4 grid-item-2">
+                            <i> <ion-icon class="icon2" name="airplane-outline"></ion-icon></i>
+                            <p class="p">02: Coverage of all major cloud
+                                providers</p>
+                        </div>
+
+                        <div class="grid4 grid-item-3">
+                            <i> <ion-icon class="icon2" name="airplane-outline"></ion-icon></i>
+                            <p class="p">03: Real cloud development practice
+                                environments</p>
+                        </div>
+
+                        <div class="grid4 grid-item-4">
+                            <i> <ion-icon class="icon2" name="airplane-outline"></ion-icon></i>
+                            <p class="p">04: tailered-to-you learning paths
+                                for every skill
+                                level</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="button1">
+                            view pricing
+                        </button>
+                        <button class="button2">
+                            tell me more
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ASIDE2">
+                    <figure> <img src="TECH.webp" class="image" alt="web app" /></figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
