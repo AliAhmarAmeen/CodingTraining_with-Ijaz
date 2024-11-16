@@ -1,0 +1,26 @@
+Naming of folders and git commits
+
+
+1 - Quiz
+----
+
+play again
+automatically next question after answering
+separate page for every difficulty level
+
+
+2 - Jokes
+----
+
+100 code line
+enter a key for punchline
+quit when he wants
+placement of buttons
+
+
+
+3 - Student
+----
+
+automatically next student name comes on pressing button that is placed along with input
+
