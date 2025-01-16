@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e9e9;
+    font-family: "Lato", sans-serif;
+}
+
+/* Multiple selection  */
+
+.section-3 button br,
+.section-4 button br,
+.section-5 button br,
+.left-section-2 button br,
+.right-section-2 button br {
+    display: none;
+}
+
+h2,
+h3,
+button {
+    font-family: "Teko", sans-serif;
+}
+
+
+
+.section-2 button,
+.section-3 button,
+.section-4 button,
+.section-5 button {
+    width: 100%;
+}
+
+header,
+.section-1,
+.left-section-2,
+.right-section-2,
+.section-3,
+.section-4,
+.section-5 {
+    background-color: white;
+}
+
+.section-1,
+.left-section-2,
+.right-section-2,
+.section-3,
+.section-4,
+.section-5 {
+    box-shadow: 0.5rem 0.5rem 0rem 0rem #696969;
+}
+
+.mini-section-1,
+.mini-section-part1,
+.mini-section-part2,
+.mini-section-3,
+.mini-section-4,
+.mini-section-5 {
+    padding: 1rem;
+    font-size: 1.5em;
+}
+
+.mini-section-part1,
+
+.mini-section-part2 {
+    min-height: 25rem;
+    max-height: 37.5rem;
+}
+
+/* p {
+    font-size: 1.5em;
+} */
+
+.header-logo {
+    font-size: 3em;
+}
+
+button {
+    font-size: 2em;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    text-transform: uppercase;
+
+    background: #070410;
+    color: #FFFFFF;
+}
+
+
+/* -----multiple selection end---- */
+
+header {
+    /* 1024px */
+    /* max-width: 64.0625rem; */
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0rem 0.5rem 0rem 0rem #696969;
+    margin-bottom: 3rem;
+
+}
+
+
+.main-container {
+    /* 900px */
+    max-width: 56.25rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 3rem;
+}
+
+/* layout start*/
+.section-1 {
+    grid-column: 1/-1;
+}
+
+.left-section-2 {
+    grid-column: 1/2;
+
+    margin-right: 1.5rem;
+}
+
+.right-section-2 {
+    grid-column: 2/3;
+
+    margin-left: 1.5rem;
+}
+
+.section-3 {
+    grid-column: 1/-1;
+}
+
+.section-4 {
+    grid-column: 1/-1;
+}
+
+.section-5 {
+    grid-column: 1/-1;
+}
+
+/* layout end*/
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+}
+
+/* section 1 */
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.roger-rabbit-pic {
+    width: -webkit-fill-available;
+    /* 400px */
+    height: 25rem;
+}
+
+.mini-section-1 {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.framed-roger-div-p {
+    flex-basis: 75%;
+
+}
+
+.framed-roger-div-btn {
+    flex-basis: 25%;
+    line-height: 0.8;
+}
+
+.hook-movie-pic {
+    /* 426px */
+    max-width: 26.256rem;
+}
+
+
+.hidden-pic {
+    max-width: 26.256rem;
+}
+
+.mini-section-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.mini-section-part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Section 3 */
+.section-3 {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.mini-section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parent-barbie-pic {
+    flex-basis: 50%;
+}
+
+
+.barbie-pic {
+    max-width: 26.256rem;
+}
+
+/* Section 4 */
+.section-4 {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.mini-section-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parent-la-la-land-pic {
+    flex-basis: 50%;
+
+}
+
+
+.la-la-land-pic {
+    max-width: 26.256rem;
+}
+
+/*Section 5 */
+.section-5 {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.mini-section-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parent-palm-spring-pic {
+    flex-basis: 50%;
+}
+
+
+.palm-spring-pic {
+    max-width: 26.256rem;
+}
+
+@media screen and (min-width: 64em) {}
+
+/* tablet */
+@media screen and (min-width: 45em) and (max-width:64em) {
+    .main-container {
+        row-gap: 2rem;
+        padding: 2rem;
+    }
+
+    header {
+        margin-bottom: 2rem;
+    }
+
+    .header-nav {
+        column-gap: 2rem;
+    }
+
+    .section-3 button br,
+    .section-4 button br,
+    .section-5 button br,
+    .left-section-2 button br,
+    .right-section-2 button br {
+        display: inline;
+        line-height: 0.8;
+    }
+
+    .section-3 button,
+    .section-4 button,
+    .section-5 button,
+    .left-section-2 button,
+    .right-section-2 button {
+        line-height: 0.8;
+    }
+
+    .mini-section-1,
+    .section-3,
+    .section-4,
+    .section-5 {
+        flex-direction: column;
+    }
+
+    /* layout start*/
+    .section-1 {
+        grid-column: 1/2;
+        margin-right: 1rem;
+    }
+
+    .left-section-2 {
+        grid-column: 2/-1;
+
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+
+    .right-section-2 {
+        grid-column: 1/2;
+
+
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .section-3 {
+        grid-column: 2/-1;
+        margin-left: 1rem;
+    }
+
+    .section-4 {
+        grid-column: 1/2;
+        margin-right: 1rem;
+    }
+
+    .section-5 {
+        grid-column: 2/-1;
+        margin-left: 1rem;
+    }
+
+    .hook-movie-pic,
+    .hidden-pic,
+    .barbie-pic,
+    .la-la-land-pic,
+    .palm-spring-pic {
+        max-width: -webkit-fill-available;
+    }
+
+    .roger-rabbit-pic {
+        max-width: -webkit-fill-available;
+        height: auto;
+    }
+
+    .mini-section-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mini-section-1,
+    .mini-section-part1,
+    .mini-section-3,
+    .mini-section-4,
+    .mini-section-5,
+    .mini-section-part2 {
+
+        min-height: 32.5rem;
+        /* 600px */
+        max-height: 37.5rem;
+    }
+}
+
+/* mobile */
+@media screen and (min-width: 22.5em) and (max-width:45em) {
+
+
+    .framed-roger-div-btn br,
+    .section-3 button br,
+    .section-4 button br,
+    .section-5 button br,
+    .left-section-2 button br,
+    .right-section-2 button br {
+        display: none;
+    }
+
+    .header,
+    .section-1,
+    .left-section-2,
+    .right-section-2,
+    .section-3,
+    .section-4,
+    .section-5 {
+        box-shadow: none;
+    }
+
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .header-logo {
+        font-size: 2em;
+    }
+
+    .main-container {
+        row-gap: 1rem;
+    }
+
+
+    button {
+        font-size: 2em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-nav {
+        margin: 0;
+    }
+
+    .mini-section-1,
+    .section-3,
+    .section-4,
+    .section-5 {
+        flex-direction: column;
+    }
+
+    .left-section-2,
+    .right-section-2 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .left-section-2,
+    .right-section-2,
+    .section-1,
+    .section-3,
+    .section-4,
+    .section-5 {
+        grid-column: 1/ -1;
+    }
+
+
+    .roger-rabbit-pic,
+    .hook-movie-pic,
+    .hidden-pic,
+    .barbie-pic,
+    .la-la-land-pic,
+    .palm-spring-pic {
+        max-width: -webkit-fill-available;
+    }
+}
