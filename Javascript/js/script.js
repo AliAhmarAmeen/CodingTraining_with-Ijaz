@@ -1,22 +1,10 @@
-
 // console.log("Script.js file");
 
 // last queries, AD's, node js, python --
 
-
 // 1. data types
 // 2. operators
 // 3. logs & alerts
-
-
-
-
-
-
-
-
-
-
 
 // ==================ROUGH==================== //
 
@@ -47,7 +35,7 @@
 // undefined
 // true, false
 // string
-// 
+//
 
 // Variable Declaring methods ++
 
@@ -64,29 +52,27 @@ var muslimFalse = false;
 var gender; // undefined
 var noValue = null;
 
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
 
 firstName = "Qadri"; //reassign
 
-
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
 
 // let ***
 // --------
-let fatherName = "xyz";
+// let fatherName = "xyz";
 
-console.log(fatherName, " : Father Name");
-fatherName = "yyy";
+// console.log(fatherName, " : Father Name");
+// fatherName = "yyy";
 
-console.log(fatherName, " : Father Name changed");
-
+// console.log(fatherName, " : Father Name changed");
 
 // const (no value change) ***
 
@@ -116,38 +102,49 @@ console.log(fatherName, " : Father Name changed");
 // let confirmMessage = confirm("Your are agree?");
 // console.log(confirmMessage);
 
-let ageFromPrompt = prompt("What is your Age?");
-console.log(ageFromPrompt);
+// let ageFromPrompt = prompt("What is your Age?");
+// var heading = document.getElementById("heading-4");
+// heading.textContent = ageFromPrompt;
+// console.log(typeof(ageFromPrompt), ": Data Type");
 
+// let phoneNumber = +9232602352548537534534534534534533333333n;
 
+// Operators **
+// ---------
 
+// arithmetic operators
+// +, -, *, /, **
 
+let add = 3 + 5;
+// add = add / 2; // reassign
 
+let power = 2 ** 5;
+console.log(power);
 
+// let division = add / 2;
 
+// console.log(add, ": Addition of Two Numbers");
+// console.log(division, ": Division");
 
+// logical operators
+// ijaz && ahmar, ijaz || hussain, !age
 
-
-
-
-
-
+// --------------------------------------------------------------------------------
 
 // Number
 // 3456
 
 // boolean
-
-// Array
-
-// Object
+// true / false
 
 // undefined
 
 // null
 
+// BigInt
+
+// Array
+
+// Object
+
 // Set
-
-
-// BigInt 
-
