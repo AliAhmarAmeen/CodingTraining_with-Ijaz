@@ -1,3 +1,4 @@
+from playsound import playsound
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox, simpledialog
@@ -13,6 +14,9 @@ class CurrencyApp:
         self.root = root
         self.root.title("Currency Converter")
         self.root.geometry("500x400")
+
+        # Play sound when the convert button is pressed
+        playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file pat
 
         self.create_frames()
         self.create_page1()
@@ -108,6 +112,10 @@ class CurrencyApp:
             return []
 
     def convert_currency(self):
+
+         # Play sound when the convert button is pressed
+        playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file path
+
         base_currency = self.base_currency_entry.get().upper()
         target_currency = self.target_currency_entry.get().upper()
         amount = self.amount_entry.get()
