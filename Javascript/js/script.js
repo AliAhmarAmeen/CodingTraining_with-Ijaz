@@ -39,6 +39,7 @@
 
 // Variable Declaring methods ++
 
+// -----------
 // var **
 // ------------
 
@@ -81,6 +82,7 @@ firstName = "Qadri"; //reassign
 
 // console.log(fullName);
 
+// ------------------
 // 3. Logs and Alerts **
 // ----------------
 
@@ -109,6 +111,7 @@ firstName = "Qadri"; //reassign
 
 // let phoneNumber = +9232602352548537534534534534534533333333n;
 
+// --------------
 // Operators **
 // ---------
 
@@ -116,10 +119,10 @@ firstName = "Qadri"; //reassign
 // +, -, *, /, **
 
 let add = 3 + 5;
-// add = add / 2; // reassign
+add = add / 2; // reassign
 
-let power = 2 ** 5;
-console.log(power);
+// let power = 2 ** 5;
+// console.log(power);
 
 // let division = add / 2;
 
@@ -128,6 +131,132 @@ console.log(power);
 
 // logical operators
 // ijaz && ahmar, ijaz || hussain, !age
+
+// ------
+// assignment operators **
+// ------
+
+// +=
+// /=
+// *=
+// -=
+
+let a = 8;
+let b = 7;
+let c;
+
+let d = null;
+
+let addition = a + b;
+
+d = addition;
+
+addition += 2;
+// addition = addition + 2;
+
+// console.log(addition);
+
+let remainder = 4 % 2;
+// console.log(remainder);
+
+// ------
+// comparison operators **
+// -------------
+
+// >
+// <
+// a <= b // check both
+// a >= b // check both
+// !=
+// ==
+// ===
+
+let res = a >= b;
+
+// console.log(res);
+
+// -------------------------------------
+// Conditional Structure **
+// -----------------------
+
+// if(condition){
+//     // code exuted if condition is true
+// }
+
+// ||, &&, ! // logical operators
+
+// ------
+// If Statement
+// ----
+
+let name = "ali";
+let password = 1234;
+
+if (name == "ali" && password == 1234) {
+  // console.log("login");
+  // here can be alot of code depends on -LOGIC-
+  // let div = a / b;
+  // alert("adfdf");
+}
+
+// ------
+// IF Else? **
+// -----
+
+// if(name == "ali" && password == 1234){
+
+//     console.log(name, " ", password);
+
+//     let addition = a + b;
+//     console.log(addition);
+
+// }else{
+
+//     console.log("Incorrect Credencials");
+//     // alert("Your password is incorrect");
+
+// }
+
+// ------
+// IF ELSE IF **
+// ------
+
+// if(!name && !password){
+
+//     console.log("provide username and password");
+
+// }else if(!name && password == 1234){
+
+//     console.log("Please provide your name")
+
+// }else if(name != "ali" && password == 1234){
+
+//     console.log("Please provide your correct name")
+
+// }else if(name == "ali" && !password){
+
+//     console.log("Please provide your password")
+
+// }else if(name == "ali" && password != 1234){
+
+//     console.log("Please provide your correct password")
+
+// }else if(name == "ali" && password == 1234){
+
+//     console.log("Logged In");
+
+// }else{
+//     console.log("Please provide correct credentials");
+// }
+
+// --------------
+// DOM  **
+// ---------
+
+// Selecting Elements,
+// Manipulating Elements,
+// Event Handling,
+// Working with Forms
 
 // --------------------------------------------------------------------------------
 

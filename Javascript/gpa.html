@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculation Form</title>
+
+    <!-- defer, async, simple -->
+    <script defer src="./js/script.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .form-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>CGPA Calculation Form</h2>
+      <form>
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <!-- Registration Number -->
+        <div class="form-group">
+          <label for="registration">Registration Number</label>
+          <input
+            type="text"
+            id="registration"
+            name="registration"
+            placeholder="Enter your registration number"
+            required
+          />
+        </div>
+
+        <!-- Subject 1 -->
+        <div class="form-group">
+          <label for="subject1">Subject 1 Grade</label>
+          <select id="subject1" name="subject1">
+            <option value="">Select Grade</option>
+            <option value="4.0">A (4.0)</option>
+            <option value="3.7">A- (3.7)</option>
+            <option value="3.3">B+ (3.3)</option>
+            <option value="3.0">B (3.0)</option>
+            <option value="2.7">B- (2.7)</option>
+            <option value="2.3">C+ (2.3)</option>
+            <option value="2.0">C (2.0)</option>
+            <option value="1.7">C- (1.7)</option>
+            <option value="1.0">D (1.0)</option>
+            <option value="0">F (0)</option>
+          </select>
+        </div>
+
+        <!-- Subject 2 -->
+        <div class="form-group">
+          <label for="subject2">Subject 2 Grade</label>
+          <select id="subject2" name="subject2">
+            <option value="">Select Grade</option>
+            <option value="4.0">A (4.0)</option>
+            <option value="3.7">A- (3.7)</option>
+            <option value="3.3">B+ (3.3)</option>
+            <option value="3.0">B (3.0)</option>
+            <option value="2.7">B- (2.7)</option>
+            <option value="2.3">C+ (2.3)</option>
+            <option value="2.0">C (2.0)</option>
+            <option value="1.7">C- (1.7)</option>
+            <option value="1.0">D (1.0)</option>
+            <option value="0">F (0)</option>
+          </select>
+        </div>
+
+        <!-- Subject 3 -->
+        <div class="form-group">
+          <label for="subject3">Subject 3 Grade</label>
+          <select id="subject3" name="subject3">
+            <option value="">Select Grade</option>
+            <option value="4.0">A (4.0)</option>
+            <option value="3.7">A- (3.7)</option>
+            <option value="3.3">B+ (3.3)</option>
+            <option value="3.0">B (3.0)</option>
+            <option value="2.7">B- (2.7)</option>
+            <option value="2.3">C+ (2.3)</option>
+            <option value="2.0">C (2.0)</option>
+            <option value="1.7">C- (1.7)</option>
+            <option value="1.0">D (1.0)</option>
+            <option value="0">F (0)</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Calculate CGPA</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

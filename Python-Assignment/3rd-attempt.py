@@ -5,6 +5,16 @@ from tkinter import messagebox, simpledialog
 import requests
 from datetime import datetime, timedelta
 
+import pygame
+
+# Initialize pygame mixer
+pygame.mixer.init()
+
+# Load and play the music
+pygame.mixer.music.load('MannHotaHai.mp3')
+pygame.mixer.music.play(-1)  # Use -1 to loop the sound infinitely
+
+
 # Your API key and base URL for the currency API
 API_KEY = "fca_live_GdR82iAVj8ureJfnvmKEcGr2RQhJubKUfqux9Oco"  # Replace with your actual API key
 BASE_URL = "https://api.freecurrencyapi.com/v1/"
@@ -16,7 +26,7 @@ class CurrencyApp:
         self.root.geometry("500x400")
 
         # Play sound when the convert button is pressed
-        playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file pat
+        # playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file pat
 
         self.create_frames()
         self.create_page1()
@@ -29,60 +39,98 @@ class CurrencyApp:
         self.frame1.pack(pady=20)
 
     def create_page1(self):
-        # Label for Base Currency
-        self.base_currency_label = ttk.Label(self.frame1, text="Base Currency", font=("Helvetica", 12))
+       # Label for Base Currency
+        self.base_currency_label = ttk.Label(
+            self.frame1, text="Base Currency", font=("Helvetica", 16), background="#f0f8ff"
+        )
         self.base_currency_label.grid(row=0, column=0, padx=10, pady=5, sticky="w")
 
-        # Base Currency Entry (Search functionality for base currency)
-        self.base_currency_entry = ttk.Entry(self.frame1, font=("Helvetica", 12))
+        # Base Currency Entry
+        self.base_currency_entry = ttk.Entry(self.frame1, font=("Helvetica", 16))
         self.base_currency_entry.grid(row=1, column=0, padx=10, pady=5)
         self.base_currency_entry.bind("<KeyRelease>", self.update_suggestions_base)
 
-        # Label for Target Currency
-        self.target_currency_label = ttk.Label(self.frame1, text="Target Currency", font=("Helvetica", 12))
-        self.target_currency_label.grid(row=0, column=1, padx=10, pady=5, sticky="w")
-
-        # Target Currency Entry (Search functionality for target currency)
-        self.target_currency_entry = ttk.Entry(self.frame1, font=("Helvetica", 12))
-        self.target_currency_entry.grid(row=1, column=1, padx=10, pady=5)
-        self.target_currency_entry.bind("<KeyRelease>", self.update_suggestions_target)
-
-        # Result Label
-        self.result_label = ttk.Label(self.frame1, text="Result: ", font=("Helvetica", 12))
-        self.result_label.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
-
-        # Entry for Amount
-        self.amount_entry = ttk.Entry(self.frame1, text="Entry for Amount: ", font=("Helvetica", 12))
-        self.amount_entry.grid(row=3, column=0, padx=10, pady=5)
-
-        # Convert Button (Using tk.Button instead of ttk.Button)
-        self.convert_button = tk.Button(self.frame1, text="Convert", command=self.convert_currency, width=20, font=("Helvetica", 12))
-        self.convert_button.grid(row=4, column=0, columnspan=2, padx=10, pady=10)
-
-        # History Button (Using tk.Button instead of ttk.Button)
-        self.history_button = tk.Button(self.frame1, text="View Historical Rates", command=self.view_historical_data, width=20, font=("Helvetica", 12))
-        self.history_button.grid(row=5, column=0, columnspan=2, padx=10, pady=10)
-
-        # Search for Currency Button (Using tk.Button instead of ttk.Button)
-        self.search_button = tk.Button(self.frame1, text="Search Currency", command=self.search_currency, width=20, font=("Helvetica", 12))
-        self.search_button.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
-
-        # Rate Notifications Button (Using tk.Button instead of ttk.Button)
-        self.notification_button = tk.Button(self.frame1, text="Set Rate Notifications", command=self.set_rate_notification, width=20, font=("Helvetica", 12))
-        self.notification_button.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
-
         # Suggestions Listbox for Base Currency
-        self.suggestions_base = tk.Listbox(self.frame1, height=5, font=("Helvetica", 12))
-        self.suggestions_base.grid(row=2, column=0, padx=10, pady=10)
-        self.suggestions_base.grid_forget()  # Hide initially
+        self.suggestions_base = tk.Listbox(
+            self.frame1, height=5, font=("Helvetica", 16), bg="#ffffff", fg="#000000"
+        )
+        self.suggestions_base.grid(row=1, column=1, padx=10, pady=10, sticky="w")
+        # self.suggestions_base.grid_forget()  # Hide initially
         self.suggestions_base.bind("<Double-1>", self.on_select_base)
 
+        # Label for Target Currency
+        self.target_currency_label = ttk.Label(
+            self.frame1, text="Target Currency", font=("Helvetica", 16), background="#f0f8ff"
+        )
+        self.target_currency_label.grid(row=2, column=0, padx=10, pady=5, sticky="w")
+
+        # Target Currency Entry
+        self.target_currency_entry = ttk.Entry(self.frame1, font=("Helvetica", 16))
+        self.target_currency_entry.grid(row=3, column=0, padx=10, pady=5)
+        self.target_currency_entry.bind("<KeyRelease>", self.update_suggestions_target)
+
         # Suggestions Listbox for Target Currency
-        self.suggestions_target = tk.Listbox(self.frame1, height=5, font=("Helvetica", 12))
-        self.suggestions_target.grid(row=2, column=1, padx=10, pady=10)
-        self.suggestions_target.grid_forget()  # Hide initially
+        self.suggestions_target = tk.Listbox(
+            self.frame1, height=5, font=("Helvetica", 16), bg="#ffffff", fg="#000000"
+        )
+        self.suggestions_target.grid(row=3, column=1, padx=10, pady=10, sticky="w")
+        # self.suggestions_target.grid_forget()  # Hide initially
         self.suggestions_target.bind("<Double-1>", self.on_select_target)
 
+        # Label for Amount
+        self.amount_label = ttk.Label(
+            self.frame1, text="Amount", font=("Helvetica", 16), background="#f0f8ff"
+        )
+        self.amount_label.grid(row=4, column=0, padx=10, pady=5, sticky="w")
+
+        # Entry for Amount
+        self.amount_entry = ttk.Entry(self.frame1, font=("Helvetica", 16))
+        self.amount_entry.grid(row=5, column=0, padx=10, pady=5)
+
+        # Convert Button
+        self.convert_button = tk.Button(
+            self.frame1,
+            text="Convert",
+            command=self.convert_currency,
+            width=20,
+            font=("Helvetica", 16),
+            bg="#4682b4",
+            fg="#ffffff",
+        )
+        self.convert_button.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
+
+        # History Button
+        self.history_button = tk.Button(
+            self.frame1,
+            text="View Historical Rates",
+            command=self.view_historical_data,
+            width=20,
+            font=("Helvetica", 16),
+            bg="#4682b4",
+            fg="#ffffff",
+        )
+        self.history_button.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
+
+        # Search Currency Button
+        self.search_button = tk.Button(
+            self.frame1,
+            text="Search Currency",
+            command=self.search_currency,
+            width=20,
+            font=("Helvetica", 16),
+            bg="#4682b4",
+            fg="#ffffff",
+        )
+        self.search_button.grid(row=8, column=0, columnspan=2, padx=10, pady=10)
+
+        # Result Label
+        self.result_label = ttk.Label(
+            self.frame1, text="Result: ", font=("Helvetica", 16), background="#f0f8ff"
+        )
+        self.result_label.grid(row=9, column=0, columnspan=2, padx=10, pady=10)
+
+
+        
     def get_exchange_rate(self, base_currency, target_currency):
         url = f"{BASE_URL}latest"
         params = {
@@ -114,7 +162,7 @@ class CurrencyApp:
     def convert_currency(self):
 
          # Play sound when the convert button is pressed
-        playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file path
+        # playsound("MannHotaHai.mp3", block=False)  # Replace with your sound file path
 
         base_currency = self.base_currency_entry.get().upper()
         target_currency = self.target_currency_entry.get().upper()
