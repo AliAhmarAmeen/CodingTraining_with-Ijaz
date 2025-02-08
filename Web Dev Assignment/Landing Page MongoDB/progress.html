@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expertise Section</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .expertise-section {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        gap: 30px;
+      }
+
+      .content {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .content h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .content h2 span {
+        color: #ff7b00;
+        font-weight: bold;
+      }
+
+      .content p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+      }
+
+      .stat {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .stat p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 6px;
+        background: #ddd;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 5px;
+      }
+
+      .progress {
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      .image {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .expertise-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="expertise-section">
+      <div class="content">
+        <h2>Our <span>Expertise</span></h2>
+        <p>
+          Tek2d started with a dream to be a one-stop solution for our clients.
+          Through all the efforts we have done 4500+ projects and created a
+          dedicated team for each of our services.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            750+
+            <p>Web Development</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%; background: blue"></div>
+            </div>
+          </div>
+          <div class="stat">
+            3000+
+            <p>Graphics Designing</p>
+            <div class="progress-bar">
+              <div
+                class="progress"
+                style="width: 90%; background: orange"
+              ></div>
+            </div>
+          </div>
+          <div class="stat">
+            350+
+            <p>UI/UX Projects</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%; background: cyan"></div>
+            </div>
+          </div>
+          <div class="stat">
+            550+
+            <p>Custom Projects</p>
+            <div class="progress-bar">
+              <div
+                class="progress"
+                style="width: 75%; background: purple"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://via.placeholder.com/400"
+          alt="Expertise Illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>
