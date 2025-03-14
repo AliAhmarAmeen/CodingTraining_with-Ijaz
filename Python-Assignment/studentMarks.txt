@@ -1,5 +1,0 @@
-4
-8439,Jake Hobbs,10,11,10,43
-1056,Fred Smith,15,16,13,52
-2398,Jo Huckleberry,12,14,15,48
-1025,Alex Brown,20,18,19,76
